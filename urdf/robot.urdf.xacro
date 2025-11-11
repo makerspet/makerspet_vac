@@ -37,7 +37,7 @@
   <joint name="caster_joint" type="fixed">
     <parent link="base_link"/>
     <child link="caster_link"/>
-    <origin xyz="${caster_inset-base_diameter/2} 0 ${caster_diameter/2-floor_clearance}" rpy="0 0 0"/>
+    <origin xyz="${-caster_inset+base_diameter/2} 0 ${caster_diameter/2-floor_clearance}" rpy="0 0 0"/>
   </joint>
 
   <link name="caster_link">
@@ -124,7 +124,7 @@
   <joint name="scan_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_scan"/>
-    <origin xyz="${lidar_center_offset} 0 ${lower_cylinder_height + laser_puck_offset}" rpy="0 -${pi} 0"/>
+    <origin xyz="${lidar_center_x_offset} 0 ${lower_cylinder_height + laser_puck_z_offset}" rpy="0 -${pi} 0"/>
   </joint>
 
   <link name="base_scan">
@@ -171,7 +171,7 @@
     <xacro:solid_cylinder_inertia m="${laser_motor_mass}" r="${laser_motor_diameter/2}" h="${laser_motor_height}"/>
   </link>
 
-  <joint name="head_joint" type="fixed">
+  <!-- joint name="head_joint" type="fixed">
     <parent link="base_link"/>
     <child link="head_link"/>
     <origin xyz="0 0 ${lower_cylinder_height}" rpy="0 0 0"/>
@@ -194,6 +194,6 @@
     </collision>
 
     <xacro:solid_semi_ellipsoid_inertia m="${head_mass}" x="${base_diameter/2}" y="${base_diameter/2}" z="${head_height}"/>
-  </link>
+  </link -->
 
 </robot>
