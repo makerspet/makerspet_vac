@@ -9,8 +9,8 @@
 # Base outer dia 0.34
 teleop_keyboard_node:
   ros__parameters:
-    max_lin_vel: 0.8
-    max_ang_vel: 5.56
+    max_lin_vel: 1.5
+    max_ang_vel: 10.8
     lin_vel_step: 0.05
     ang_vel_step: 0.2
     lin_vel_step_large: 0.2
