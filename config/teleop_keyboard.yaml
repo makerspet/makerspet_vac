@@ -4,14 +4,14 @@
 # ang_vel_step = min_ang_vel, obtained from test
 # max_lin_accel = WheelDia * RatedTorqueKgCm * 100 / WeightKg
 # max_ang_accel = max_lin_accel / (wheel_track / 2)
-# 260RPM motor, derated 90%
-# Wheels track 0.286236
-# Base outer dia 0.34
+# 500RPM motor, derated 90%
+# Wheels track 0.282m
+# Base outer dia 0.34m
 teleop_keyboard_node:
   ros__parameters:
     max_lin_vel: 1.5
     max_ang_vel: 10.8
-    lin_vel_step: 0.05
-    ang_vel_step: 0.2
-    lin_vel_step_large: 0.2
+    lin_vel_step: 0.2
+    ang_vel_step: 0.5
+    lin_vel_step_large: 0.5
     ang_vel_step_large: 2.5
